@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="The Daily Brew Cafe — Specialty Coffee in Dubai, UAE. Crafted Coffee. Cozy Moments." />
+    <meta name="theme-color" content="#3b1f10" />
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="The Daily Brew Cafe Dubai" />
+    <meta property="og:description" content="Crafted Coffee. Cozy Moments. Specialty coffee in the heart of Dubai." />
+    <meta property="og:image" content="https://abood999-cyber.github.io/Coffe-sample/og-image.jpg" />
+    <meta property="og:url" content="https://abood999-cyber.github.io/Coffe-sample/" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/Coffe-sample/favicon.svg" />
+    <link rel="apple-touch-icon" href="/Coffe-sample/apple-touch-icon.png" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>The Daily Brew Cafe Dubai — Specialty Coffee</title>
+
+    <!-- GitHub Pages SPA fix for React Router -->
+    <script>
+      (function () {
+        var redirect = sessionStorage.getItem('spa-redirect');
+        if (redirect) {
+          sessionStorage.removeItem('spa-redirect');
+          var url = new URL(redirect);
+          window.history.replaceState(null, null, url.pathname + url.search + url.hash);
+        }
+      })();
+    </script>
+
+    <style>
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+      :root {
+        --color-espresso: #3b1f10;
+        --color-mocha:    #6b3a2a;
+        --color-latte:    #c4a882;
+        --color-cream:    #f5efe6;
+        --color-text:     #2a1a0e;
+        --font-serif:     'Cormorant Garamond', Georgia, serif;
+        --font-sans:      'Jost', sans-serif;
+      }
+
+      body {
+        font-family: var(--font-sans);
+        background-color: var(--color-cream);
+        color: var(--color-text);
+        -webkit-font-smoothing: antialiased;
+      }
+
+      #root {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      #root:empty::after {
+        content: '';
+        position: fixed;
+        inset: 0;
+        background: var(--color-espresso);
+        animation: fadeOut 0.4s ease 0.8s forwards;
+      }
+
+      @keyframes fadeOut {
+        to { opacity: 0; pointer-events: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
